@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 # Define the log file and its new name with timestamp
 log_file="heart_rate_log.txt"
