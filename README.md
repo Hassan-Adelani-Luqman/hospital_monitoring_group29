@@ -6,3 +6,5 @@ This directory contains 3 main scripts: the heart_rate_monitor.sh file, which re
 The second script is the "archive_log.sh" whose work is to archive the log file "heart_rate_log.txt"
 
 The third script is the "backup_archives.sh" script that moves the archived log files into a designated directory called "archived_logs_group29"
+
+The group consists of 6 members. We did two sessions in order to finish this project. However, one of the members could not make it due to health issues.
