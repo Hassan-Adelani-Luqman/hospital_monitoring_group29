@@ -1,26 +1,10 @@
-#!/bin/bash
+#!/usr/bin/env bash
+read -p "Enter device name: " devName
 
-# Prompt for device name
-echo "Enter device name (e.g., Monitor_A): "
-read device_name
 
-# Log file
-log_file="heart_rate_log.txt"
-
-# Function to simulate heart rate and log the data
-log_heart_rate() {
-    while true; do
-        timestamp=$(date +"%Y-%m-%d %H:%M:%S")
-        heart_rate=$((RANDOM % 40 + 60))  # Random heart rate between 60 and 100
-        echo "$timestamp $device_name $heart_rate" >> $log_file
-        sleep 1  # Log every second
-    done
-}
-
-# Start logging heart rate in the background
-log_heart_rate &
-pid=$!
-
-# Display the process ID of the background process
-echo "Heart rate monitoring running in the background. Process ID: $pid"
-
+while true; do
+    rand=$(shuf -i 65-200 -n 1)
+    echo "$(date +"%F %T") $devName $rand" >> heart_rate_log.txt
+    sleep 1
+done &
+echo "the PID is: $!"

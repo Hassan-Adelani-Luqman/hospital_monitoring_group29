@@ -1,31 +1,12 @@
-# hospital_monitoring_group29
-this is the summative task for group 29
-Installation
-Step 1: Clone the Repository
-Start by cloning the repository to your local machine. Open a terminal and run:
-bash
-Copy code
-git clone <your-repo-url>
-cd <your-repo-directory>
 
-Step 2: Set Up Directories
-Once inside the project directory, ensure the necessary directories are in place. Specifically, the script backup_archives.sh will expect a directory to store the archived logs.
-Create this directory manually or let the script create it for you when it runs:
-bash
-Copy code
-mkdir -p archived_logs_group29
+This is the summative task for group-29
 
-Replace group29 with your actual group number.
-Step 3: Ensure the Scripts Are Executable
-Before running the scripts, make sure they have executable permissions:
-bash
-Copy code
-chmod +x archive_log.sh backup_archives.sh
+This project consists of two scripts:
+archive_log.sh - A script that archives a log file (heart_rate_log.txt) by renaming it with a timestamp.
+backup_archives.sh - A script that moves all archived log files into a designated directory and backs them up to a remote server using SSH and SCP.
+This README provides detailed instructions for setting up the project locally, running the scripts, and testing them.
 
-Step 4: Update Remote Server Credentials (For Backup)
-You’ll need to update the backup_archives.sh script with your remote server credentials. Open the script and update the following placeholders with your details:
-bash
-Copy code
-remote_host="<YOUR_REMOTE_HOST>"
-remote_user="<YOUR_REMOTE_USER>"
-remote_directory="/home/<YOUR_REMOTE_DIRECTORY>"
+Prerequisites
+Before setting up the project locally, ensure you have the following install
+
+The group consists of 6 members. We did two sessions in order to finish this project. However, one of the members could not make it due to health issues.
