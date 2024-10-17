@@ -26,9 +26,8 @@ remote_host="080cc2d7ecdc.601a9382.alu-cod.online"
 remote_user="080cc2d7ecdc"
 remote_directory="/home/"
 
-
+#connect to the remote server
 scp "$archive_dir/*" "$remote_user@$remote_host:$remote_directory"
-
 
 if [ $? -eq 0 ]; then
     echo "Backup to remote server was successful."
